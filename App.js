@@ -41,7 +41,7 @@ export default class App extends React.Component {
         title:'4488',
         author:'sws'
     });
-    this.itemsRef.update({ author: 'kar' });
+    this.itemsRef.update({ author: 'krrr' });
 
     this.state = {
       dataSource: new ListView.DataSource({
