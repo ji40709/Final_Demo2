@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Platform, Image, Text, View,ListView } from 'react-native';
-
+import { StyleSheet, Platform, Image, Text, View,ListView, Picker } from 'react-native';
 import firebase from 'react-native-firebase';
 
 // Initialize Firebase
@@ -41,7 +40,7 @@ export default class App extends React.Component {
         title:'4488',
         author:'sws'
     });
-    this.itemsRef.update({ author: 'krrr' });
+    this.itemsRef.update({ author: 'kee' });
 
     this.state = {
       dataSource: new ListView.DataSource({
@@ -58,10 +57,6 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View>
-
-
-      </View>
     );
   }
 }
