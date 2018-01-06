@@ -1,3 +1,5 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
-AppRegistry.registerComponent('Restaurant', () => App);
+
+import item from './item_btn';
+AppRegistry.registerComponent('Restaurant', () =>item);
+

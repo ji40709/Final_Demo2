@@ -6,7 +6,8 @@ import { StyleSheet,
   View,
   ListView,
   Button,
-  TouchableOpacity
+  TouchableOpacity,
+  Picker
         } from 'react-native';
 
 import firebase from 'react-native-firebase';
@@ -49,7 +50,7 @@ export default class App extends React.Component {
         title:'4488',
         author:'sws'
     });
-    this.itemsRef.update({ author: 'kar' });
+    this.itemsRef.update({ author: 'kee' });
 
     this.state = {
       dataSource: new ListView.DataSource({
@@ -66,11 +67,13 @@ export default class App extends React.Component {
 
   render() {
     return (
+
        <TouchableOpacity onPress={()=>{}}>
         <View style = {styles.startsetting}>
          <Text style={styles.Textsetting}>開始點餐</Text>
         </View>
        </TouchableOpacity>
+
     );
   }
 }
