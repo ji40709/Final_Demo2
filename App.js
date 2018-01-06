@@ -1,5 +1,15 @@
 import React from 'react';
-import { StyleSheet, Platform, Image, Text, View,ListView, Picker } from 'react-native';
+import { StyleSheet,
+  Platform,
+  Image,
+  Text,
+  View,
+  ListView,
+  Button,
+  TouchableOpacity,
+  Picker
+        } from 'react-native';
+
 import firebase from 'react-native-firebase';
 
 // Initialize Firebase
@@ -57,6 +67,13 @@ export default class App extends React.Component {
 
   render() {
     return (
+
+       <TouchableOpacity onPress={()=>{}}>
+        <View style = {styles.startsetting}>
+         <Text style={styles.Textsetting}>開始點餐</Text>
+        </View>
+       </TouchableOpacity>
+
     );
   }
 }
@@ -66,7 +83,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    borderRadius:30,
+    height:30,
+    width:50
   },
   logo: {
     height: 80,
@@ -94,5 +113,27 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 4,
     textAlign: 'center',
+  },
+  startsetting: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 80,
+    marginLeft: 75,
+    marginRight: 75,
+    height:60,
+    marginTop: 350,
+    backgroundColor:'#FFED97',
+  },
+  Textsetting: {
+    color: '#BEBEBE',
+    fontSize: 30,
+  },
+  touchsetting: {
+    alignItems: 'center',
+    borderRadius: 80,
+    marginLeft: 75,
+    marginRight: 75,
+    height:60,
+    marginTop: 350,
   }
 });
