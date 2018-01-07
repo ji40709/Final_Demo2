@@ -10,6 +10,19 @@ import {
   Button,
 } from 'react-native';
 
+import {Router,Stack,Scene,Actions} from 'react-native-router-flux';
+
+import firebase from 'react-native-firebase';
+
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyDhs2knntClbJYgLmd8Y3uq_oOiWfR8WQI",
+  authDomain: "fireb-c693f.firebaseapp.com",
+  databaseURL: "https://fireb-c693f.firebaseio.com",
+  storageBucket: "fireb-c693f.appspot.com",
+};
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -45,7 +58,7 @@ const styles = StyleSheet.create({
     }
 });
 
-export default class Picker_Text extends Component {
+export default class Checkout extends Component {
   constructor(props) {
     super(props);
     data=['1','2','3','4'];
@@ -73,7 +86,7 @@ export default class Picker_Text extends Component {
          </View>
         <View style={{backgroundColor:"white",flex:0.15,paddingRight:40,paddingLeft:40,paddingTop:50}}>
             <Button
-                onPress={()=>{}}
+                onPress={ () =>{ Actions.home() } }
                 title="確認送出"
                 color='#FFCC22'
                 style={styles.button}
@@ -82,7 +95,7 @@ export default class Picker_Text extends Component {
         </View>
         <View style={{backgroundColor:"white",flex:0.15,paddingRight:40,paddingLeft:40,paddingTop:10}}>
             <Button
-                onPress={()=>{}}
+                onPress={ () =>{ Actions.menu() } }
                 title="返回選單"
                 color='#FF7744'
                 style={styles.button}
@@ -94,5 +107,3 @@ export default class Picker_Text extends Component {
     );
   }
 }
-
-

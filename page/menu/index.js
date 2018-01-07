@@ -9,18 +9,20 @@ import { StyleSheet,
   TouchableOpacity,
         } from 'react-native';
 
+import {Router,Stack,Scene,Actions} from 'react-native-router-flux';
+
 import firebase from 'react-native-firebase';
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "apiKey",
+  apiKey: "AIzaSyDhs2knntClbJYgLmd8Y3uq_oOiWfR8WQI",
   authDomain: "fireb-c693f.firebaseapp.com",
   databaseURL: "https://fireb-c693f.firebaseio.com",
   storageBucket: "fireb-c693f.appspot.com",
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-export default class App extends React.Component {
+export default class Menu extends React.Component {
 
     listenForItems(itemsRef) {
         itemsRef.on('value', (snap) => {
@@ -70,7 +72,7 @@ export default class App extends React.Component {
       <View style={styles.first}>
         <View style={styles.second}>
              <View style={styles.third}>
-               <TouchableOpacity  onPress={()=>{}} style = {styles.buttonset}>
+               <TouchableOpacity  onPress={ () =>{ Actions.listitem() } }  style = {styles.buttonset}>
                   <Text style={styles.Textlook}>主菜</Text>
                </TouchableOpacity>
              </View>
@@ -78,7 +80,7 @@ export default class App extends React.Component {
              <View style={styles.borderset}></View>
 
              <View style={styles.third}>
-                <TouchableOpacity onPress={()=>{}} style = {styles.buttonset}>
+                <TouchableOpacity onPress={ () =>{ Actions.listitem() } }  style = {styles.buttonset}>
                   <Text style={styles.Textlook}>麵食</Text>
                 </TouchableOpacity>
              </View>
@@ -88,7 +90,7 @@ export default class App extends React.Component {
 
         <View style={styles.second}>
              <View style={styles.third}>
-                 <TouchableOpacity onPress={()=>{}} style = {styles.buttonset}>
+                 <TouchableOpacity onPress={ () =>{ Actions.listitem() } }  style = {styles.buttonset}>
                    <Text style={styles.Textlook}>湯品</Text>
                  </TouchableOpacity>
              </View>
@@ -96,7 +98,7 @@ export default class App extends React.Component {
              <View style={styles.borderset}></View>
 
              <View style={styles.third}>
-                 <TouchableOpacity onPress={()=>{}} style = {styles.buttonset}>
+                 <TouchableOpacity onPress={ () =>{ Actions.listitem() } }  style = {styles.buttonset}>
                     <Text style={styles.Textlook}>副菜</Text>
                  </TouchableOpacity>
              </View>
@@ -106,7 +108,7 @@ export default class App extends React.Component {
 
         <View style={styles.second}>
               <View style={styles.third}>
-                  <TouchableOpacity onPress={()=>{}} style = {styles.buttonset}>
+                  <TouchableOpacity onPress={ () =>{ Actions.listitem() } }  style = {styles.buttonset}>
                      <Text style={styles.Textlook}>甜點</Text>
                   </TouchableOpacity>
               </View>
@@ -114,7 +116,7 @@ export default class App extends React.Component {
               <View style={styles.borderset}></View>
 
               <View style={styles.third}>
-                  <TouchableOpacity onPress={()=>{}} style = {styles.buttonset}>
+                  <TouchableOpacity onPress={ () =>{ Actions.listitem() } }  style = {styles.buttonset}>
                      <Text style={styles.Textlook}>水果</Text>
                   </TouchableOpacity>
               </View>
